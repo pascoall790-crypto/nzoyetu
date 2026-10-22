@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Móveis Planejados | NZO YETU</title>
+
+    <meta name="description" content="Veja exemplos e ideias de móveis planejados para cozinhas, quartos, salas e outros espaços, com a NZO YETU.">
+
+    <link rel="icon" href="imagens/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --navy: #102b46;
+            --navy-light: #183d5e;
+            --orange: #f39800;
+            --white: #ffffff;
+            --light: #f5f7fa;
+            --text: #536273;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--light);
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            background: var(--white);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        .navbar {
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--navy);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .brand img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+        }
+
+        .brand small {
+            display: block;
+            color: var(--text);
+            font-size: 11px;
+            font-weight: normal;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--navy);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+
+        /* DESTAQUE */
+
+        .hero {
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(
+                    rgba(16, 43, 70, 0.84),
+                    rgba(16, 43, 70, 0.84)
+                ),
+                url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80")
+                center/cover no-repeat;
+            color: #ffffff;
+            text-align: center;
+            padding: 70px 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .label {
+            color: var(--orange);
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            line-height: 1.2;
+            margin: 15px 0;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--orange);
+            color: #ffffff;
+            padding: 13px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 24px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #d98200;
+            transform: translateY(-2px);
+        }
+
+        /* INTRODUÇÃO */
+
+        .intro {
+            padding: 65px 0 35px;
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: var(--navy);
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* GALERIA */
+
+        .gallery-section {
+            padding: 35px 0 75px;
+        }
+
+        .gallery-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .gallery-heading h2 {
+            color: var(--navy);
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(16, 43, 70, 0.08);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .gallery-info {
+            padding: 20px;
+        }
+
+        .gallery-info h3 {
+            color: var(--navy);
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .gallery-info p {
+            font-size: 14px;
+        }
+
+        .notice {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* CONTACTO */
+
+        .contact {
+            background: var(--navy);
+            color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .contact p {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .contact .button {
+            background: #25d366;
+        }
+
+        .contact .button:hover {
+            background: #1eb956;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background: #0a1d30;
+            color: #ffffff;
+            text-align: center;
+            padding: 22px 15px;
+            font-size: 13px;
+        }
+
+        /* BOTÃO DE MODO ESCURO */
+
+        .theme-toggle {
+            border: 1px solid var(--orange);
+            background: transparent;
+            color: var(--navy);
+            padding: 9px 12px;
+            border-radius: 6px;
+            font: inherit;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.25s, color 0.25s;
+        }
+
+        .theme-toggle:hover {
+            background: var(--orange);
+            color: #ffffff;
+        }
+
+        /* =================================
+           MODO ESCURO
+        ================================= */
+
+        body.dark-mode {
+            --navy: #e8eef5;
+            --navy-light: #cbd8e6;
+            --white: #17212b;
+            --light: #101820;
+            --text: #c0ccd8;
+
+            background: #101820;
+            color: #c0ccd8;
+        }
+
+        body.dark-mode header {
+            background: #17212b;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.35);
+        }
+
+        body.dark-mode .brand,
+        body.dark-mode .nav-links a,
+        body.dark-mode .intro h2,
+        body.dark-mode .gallery-heading h2,
+        body.dark-mode .gallery-info h3 {
+            color: #e8eef5;
+        }
+
+        body.dark-mode .brand small {
+            color: #c0ccd8;
+        }
+
+        body.dark-mode .nav-links a:hover {
+            color: var(--orange);
+        }
+
+        body.dark-mode .intro,
+        body.dark-mode .gallery-section {
+            background: #101820;
+        }
+
+        body.dark-mode .intro p,
+        body.dark-mode .gallery-heading p,
+        body.dark-mode .gallery-info p,
+        body.dark-mode .notice {
+            color: #c0ccd8;
+        }
+
+        body.dark-mode .gallery-item {
+            background: #17212b;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        body.dark-mode .contact {
+            background: #0b141c;
+            color: #e8eef5;
+        }
+
+        body.dark-mode footer {
+            background: #070d12;
+            color: #c0ccd8;
+        }
+
+        body.dark-mode .theme-toggle {
+            color: #e8eef5;
+            border-color: #f39800;
+        }
+
+        body.dark-mode .theme-toggle:hover {
+            background: #f39800;
+            color: #ffffff;
+        }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 850px) {
+            .gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 15px 0;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                min-height: 320px;
+                padding: 50px 0;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .intro {
+                padding-top: 45px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item img {
+                height: 230px;
+            }
+
+            .contact h2,
+            .intro h2,
+            .gallery-heading h2 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+        <div class="container navbar">
+
+            <a href="index.html" class="brand">
+                <img src="imagens/logo(1).png" alt="Logótipo NZO YETU">
+
+                <span>
+                    NZO YETU
+                    <small>Construção e Serviços</small>
+                </span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="#galeria">Galeria</a>
+    
+<!-- INTERRUPTOR DO MODO CLARO/ESCURO -->
+<button
+    type="button"
+    id="theme-toggle"
+    class="theme-switch"
+    aria-label="Activar modo escuro"
+    aria-pressed="false">
+
+    <span class="theme-switch-thumb">
+        <span class="theme-sun">☀️</span>
+        <span class="theme-moon">☾</span>
+    </span>
+
+</button>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- DESTAQUE -->
+
+    <section class="hero">
+        <div class="container hero-content">
+
+            <span class="label">Interiores e mobiliário</span>
+
+            <h1>Móveis Planejados</h1>
+
+            <p>
+                Ideias para aproveitar melhor cada espaço, com soluções
+                de mobiliário adaptadas às necessidades de cada ambiente.
+            </p>
+
+            <a href="#galeria" class="button">Explorar galeria</a>
+
+        </div>
+    </section>
+
+    <!-- APRESENTAÇÃO -->
+
+    <section class="intro">
+        <div class="container">
+
+            <h2>Mobiliário pensado para o seu espaço</h2>
+
+            <p>
+                Os móveis planejados permitem organizar melhor os ambientes,
+                aproveitar espaços disponíveis e combinar funcionalidade
+                com decoração. Nesta galeria, apresentamos referências
+                visuais para cozinhas, quartos, salas e outros espaços.
+                Consulte a NZO YETU para saber mais sobre os serviços
+                disponíveis e as possibilidades para o seu projeto.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+
+    <section class="gallery-section" id="galeria">
+        <div class="container">
+
+            <div class="gallery-heading">
+                <h2>Galeria de móveis planejados</h2>
+                <p>Explore ideias de mobiliário para diferentes ambientes.</p>
+            </div>
+
+            <div class="gallery">
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/1.webp"
+                        alt="Exemplo de mobiliário e decoração de sala"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Mobiliário para cozinhas</h3>
+                        <p>Transformamos a sua cozinha num espaço de conforto, beleza e funcionalidade</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/2.webp"
+                        alt="Exemplo de sala com decoração moderna"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Cozinhas modernas</h3>
+                        <p>O equilíbrio perfeito entre modernidade, organização e sofisticação</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/3.webp"
+                        alt="Exemplo de interior com mobiliário"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Quartos personalizados</h3>
+                        <p>Criamos quartos à sua medida, onde o conforto encontra a elegância</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/4.jpg"
+                        alt="Exemplo de ambiente interior residencial"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Organização de cozinhas</h3>
+                        <p>Cada detalhe pensado para tornar o seu espaço mais prático e organizado</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/5.jpg"
+                        alt="Exemplo de ambiente de sala"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Design de interiores</h3>
+                        <p>Damos vida às suas ideias através de espaços únicos e bem concebidos</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/6.jpg"
+                        alt="Exemplo de decoração interior"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Painéis e detalhes decorativos</h3>
+                        <p>São os pequenos detalhes que transformam um espaço comum em algo extraordinário'''''''</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/7.jpg"
+                        alt="Exemplo de interior com acabamentos modernos"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Roupeiros por medida</h3>
+                        <p>Aproveitamos cada espaço para oferecer mais organização e praticidade</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/8.webp"
+                        alt="Exemplo de interior com acabamentos modernos"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Salas de estar modernas</h3>
+                        <p>Espaços pensados para receber, relaxar e viver bons momentos</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/9.jpg"
+                        alt="Exemplo de interior com acabamentos modernos"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Revestimentos decorativos</h3>
+                        <p>Elevamos a beleza dos seus ambientes com acabamentos de excelência</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/10.jpg"
+                        alt="Exemplo de interior com acabamentos modernos"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Armários e mobiliário funcional</h3>
+                        <p>Soluções inteligentes de arrumação, criadas para simplificar o seu dia a dia</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/11.webp"
+                        alt="Exemplo de interior com acabamentos modernos"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Salas com grandes janelas</h3>
+                        <p>Mais luz, mais amplitude e mais conforto para viver melhor</p>
+                    </div>
+                </article>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+
+    <section class="contact" id="contacto">
+        <div class="container">
+
+            <h2>Tem uma ideia para os seus móveis?</h2>
+
+            <p>
+                Entre em contacto connosco para partilhar a sua ideia
+                e solicitar informações sobre as possibilidades para o seu espaço.
+            </p>
+
+            <a
+                class="button"
+                href="https://wa.me/244951103586?text=Ol%C3%A1%2C%20NZO%20YETU!%20Gostaria%20de%20saber%20mais%20sobre%20m%C3%B3veis%20planejados%20e%20solu%C3%A7%C3%B5es%20para%20interiores."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Contactar pelo WhatsApp
+            </a>
+
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+        <p>
+            &copy; <span id="ano"></span> NZO YETU.
+            Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById("ano").textContent =
+            new Date().getFullYear();
+    </script>
+
+    <!-- JavaScript que controla o modo claro/escuro -->
+    <script src="script.js"></script>
+
+
+</body>
+</html>

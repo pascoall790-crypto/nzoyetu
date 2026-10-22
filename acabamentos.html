@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acabamentos Interiores | NZO YETU</title>
+
+    <meta name="description" content="Conheça os serviços de acabamentos interiores da NZO YETU, incluindo pintura, decoração, tetos falsos e revestimentos.">
+
+    <link rel="icon" href="imagens/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --navy: #102b46;
+            --navy-light: #183d5e;
+            --orange: #f39800;
+            --white: #ffffff;
+            --light: #f5f7fa;
+            --text: #536273;
+            --border: #e5eaf0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--light);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            background: var(--white);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--navy);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .brand img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+        }
+
+        .brand small {
+            display: block;
+            color: var(--text);
+            font-size: 11px;
+            font-weight: normal;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--navy);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+
+        /* DESTAQUE */
+
+        .hero {
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(rgba(16, 43, 70, 0.83), rgba(16, 43, 70, 0.83)),
+                url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80")
+                center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
+            padding: 70px 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .label {
+            color: var(--orange);
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            line-height: 1.2;
+            margin: 15px 0;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--orange);
+            color: var(--white);
+            padding: 13px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 24px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #d98200;
+            transform: translateY(-2px);
+        }
+
+        /* INTRODUÇÃO */
+
+        .intro {
+            padding: 65px 0 35px;
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: var(--navy);
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* GALERIA */
+
+        .gallery-section {
+            padding: 35px 0 75px;
+        }
+
+        .gallery-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .gallery-heading h2 {
+            color: var(--navy);
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(16, 43, 70, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .gallery-info {
+            padding: 20px;
+        }
+
+        .gallery-info h3 {
+            color: var(--navy);
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .gallery-info p {
+            font-size: 14px;
+        }
+
+        .notice {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* CONTACTO */
+
+        .contact {
+            background: var(--navy);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .contact p {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .contact .button {
+            background: #25d366;
+        }
+
+        .contact .button:hover {
+            background: #1eb956;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background: #0a1d30;
+            color: var(--white);
+            text-align: center;
+            padding: 22px 15px;
+            font-size: 13px;
+        }
+
+        /* TELEMÓVEIS */
+
+        @media (max-width: 850px) {
+            .gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 15px 0;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                min-height: 320px;
+                padding: 50px 0;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .intro {
+                padding-top: 45px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item img {
+                height: 230px;
+            }
+
+            .contact h2,
+            .intro h2,
+            .gallery-heading h2 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container navbar">
+
+            <a href="index.html" class="brand">
+                <img src="imagens/logo(1).png" alt="Logótipo NZO YETU">
+
+                <span>
+                    NZO YETU
+                    <small>Construção e Serviços</small>
+                </span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="#galeria">Galeria</a>
+                
+
+                <!-- INTERRUPTOR DO MODO CLARO/ESCURO -->
+<button
+    type="button"
+    id="theme-toggle"
+    class="theme-switch"
+    aria-label="Activar modo escuro"
+    aria-pressed="false">
+
+    <span class="theme-switch-thumb">
+        <span class="theme-sun">☀️</span>
+        <span class="theme-moon">☾</span>
+    </span>
+
+</button>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- DESTAQUE -->
+    <section class="hero">
+        <div class="container hero-content">
+
+            <span class="label">O nosso trabalho</span>
+
+            <h1>Acabamentos Interiores</h1>
+
+            <p>
+                Soluções para transformar espaços, com atenção aos detalhes,
+                qualidade nos acabamentos e valorização dos ambientes.
+            </p>
+
+            <a href="#galeria" class="button">Explorar galeria</a>
+
+        </div>
+    </section>
+
+    <!-- APRESENTAÇÃO -->
+    <section class="intro">
+        <div class="container">
+
+            <h2>Detalhes que fazem a diferença</h2>
+
+            <p>
+                A NZO YETU presta serviços relacionados com acabamentos
+                interiores, pintura, revestimentos, tetos falsos e decoração.
+                O nosso objetivo é ajudar a criar espaços funcionais,
+                agradáveis e adaptados às necessidades de cada cliente.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="gallery-section" id="galeria">
+        <div class="container">
+
+            <div class="gallery-heading">
+                <h2>Galeria de acabamentos</h2>
+                <p>Veja exemplos de acabamentos e ideias para interiores.</p>
+            </div>
+
+    
+              <div class="container">
+
+            <div class="gallery">
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/acabamento 2.jpg"
+                        alt="Exemplo de acabamento de sala moderna"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Corredores e acabamentos interiores</h3>
+                        <p>Transformamos cada passagem num espaço de elegância e sofisticação</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/acabamento.jpg"
+                        alt="Exemplo de decoração interior"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Decoração de salas</h3>
+                        <p>Cada detalhe contribui para criar ambientes únicos e memoráveis</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/acabamento 4.webp"
+                        alt="Exemplo de interior com acabamentos modernos"
+                        loading="lazy"
+                    >
+
+                    
+                    <div class="gallery-info">
+                        <h3>Tetos modernos com iluminação</h3>
+                        <p>Elevamos os seus espaços com criatividade, luz e modernidade</p>
+                    </div>
+                </article>
+            
+                <article class="gallery-item">
+                    <img
+                        src="imagens/teto falso 1.jpg"
+                        alt="Exemplo de sala com acabamento contemporâneo"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Tetos falsos decorativos</h3>
+                        <p>O teto certo transforma completamente a personalidade de um ambiente</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/teto falso 2.jpg"
+                        alt="Exemplo de acabamento de uma divisão"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Tetos com detalhes curvos</h3>
+                        <p>Design inovador que combina formas, luz e elegância</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/teto falso 3.webp"
+                        alt="Exemplo de interior residencial"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Quartos de luxo</h3>
+                        <p>Criamos espaços onde o conforto e o luxo se encontram</p>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+        <section class="gallery-section" id="galeria">
+        <div class="container">
+
+
+            <div class="gallery">
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/teto falso.webp"
+                        alt="Exemplo de acabamento de sala moderna"
+                        loading="lazy"
+                    >
+
+                    
+                    <div class="gallery-info">
+                        <h3>Iluminação decorativa de interiores</h3>
+                        <p>A iluminação ideal dá vida a cada detalhe do seu espaço</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/teto-falso-em-diagonal.jpg"
+                        alt="Exemplo de decoração interior"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Tetos com iluminação indireta</h3>
+                        <p>Mais harmonia, mais conforto e um acabamento que faz a diferença</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/teto 5.webp"
+                        alt="Exemplo de interior com acabamentos modernos"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Tetos com iluminação geométrica</h3>
+                        <p>Linhas modernas e iluminação pensadas para impressionar</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/teto 6.jpg"
+                        alt="Exemplo de interior com acabamentos modernos"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Tetos decorativos clássicos</h3>
+                        <p>A beleza está nos detalhes que tornam cada espaço especial</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/teto 7.jpg"
+                        alt="Exemplo de interior com acabamentos modernos"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Tetos com acabamento contemporâneo</h3>
+                        <p>Soluções modernas para espaços que inspiram</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/teto 8.jpg"
+                        alt="Exemplo de interior com acabamentos modernos"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Iluminação linear</h3>
+                        <p>Simplicidade e precisão para iluminar com elegância</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/acabamento7.webp"
+                        alt="Exemplo de interior com acabamentos modernos"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Tetos com iluminação decorativa</h3>
+                        <p>Detalhes luminosos que valorizam cada canto da sua casa</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/acabemento 5.png"
+                        alt="Exemplo de interior com acabamentos modernos"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Balcões e receções personalizadas</h3>
+                        <p>A primeira impressão começa num espaço bem concebido</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/acabemento 6.jpg"
+                        alt="Exemplo de interior com acabamentos modernos"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Salas de estar sofisticadas</h3>
+                        <p>Criamos ambientes que refletem o seu estilo e valorizam o seu espaço</p>
+                    </div>
+                </article>
+
+    </section>
+
+    
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+        <div class="container">
+
+            <h2>Precisa de acabamentos para o seu espaço?</h2>
+
+            <p>
+                Entre em contacto connosco para apresentar a sua ideia
+                e solicitar mais informações sobre os nossos serviços.
+            </p>
+
+            <a
+                class="button"
+                href="https://wa.me/244951103586?text=Ol%C3%A1%2C%20NZO%20YETU!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20acabamentos%20interiores."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Contactar pelo WhatsApp
+            </a>
+
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>
+            &copy; <span id="ano"></span> NZO YETU.
+            Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById("ano").textContent =
+            new Date().getFullYear();
+    </script>
+
+    <script src="script.js"></script>
+
+    <!-- Janela para ampliar as imagens da galeria -->
+<div class="lightbox" id="lightbox">
+    <button
+        type="button"
+        class="lightbox-close"
+        id="lightbox-close"
+        aria-label="Fechar imagem"
+    >
+        &times;
+    </button>
+
+    <img id="lightbox-image" src="" alt="">
+</div>
+
+<script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const closeButton = document.getElementById("lightbox-close");
+
+    // Seleciona apenas as imagens desta galeria
+    document.querySelectorAll(".gallery-item img").forEach(function (img) {
+        img.addEventListener("click", function () {
+            lightboxImage.src = img.src;
+            lightboxImage.alt = img.alt;
+            lightbox.classList.add("active");
+        });
+    });
+
+    // Fecha ao clicar no X
+    closeButton.addEventListener("click", function () {
+        lightbox.classList.remove("active");
+        lightboxImage.src = "";
+    });
+
+    // Fecha ao clicar fora da imagem
+    lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) {
+            lightbox.classList.remove("active");
+            lightboxImage.src = "";
+        }
+    });
+
+    // Fecha ao pressionar ESC
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            lightbox.classList.remove("active");
+            lightboxImage.src = "";
+        }
+    });
+</script>
+
+
+</body>
+</html>

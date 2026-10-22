@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Construção Residencial | NZO YETU</title>
+
+    <meta name="description" content="Conheça os serviços de construção residencial da NZO YETU, incluindo alvenaria, reboco e trabalhos de construção civil.">
+
+    <link rel="icon" href="imagens/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --navy: #102b46;
+            --navy-light: #183d5e;
+            --orange: #f39800;
+            --white: #ffffff;
+            --light: #f5f7fa;
+            --text: #536273;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--light);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            background: var(--white);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--navy);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .brand img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+        }
+
+        .brand small {
+            display: block;
+            color: var(--text);
+            font-size: 11px;
+            font-weight: normal;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--navy);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+
+        /* DESTAQUE */
+
+        .hero {
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(rgba(16, 43, 70, 0.84), rgba(16, 43, 70, 0.84)),
+                url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80")
+                center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
+            padding: 70px 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .label {
+            color: var(--orange);
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            line-height: 1.2;
+            margin: 15px 0;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--orange);
+            color: var(--white);
+            padding: 13px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 24px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #d98200;
+            transform: translateY(-2px);
+        }
+
+        /* INTRODUÇÃO */
+
+        .intro {
+            padding: 65px 0 35px;
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: var(--navy);
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* GALERIA */
+
+        .gallery-section {
+            padding: 35px 0 75px;
+        }
+
+        .gallery-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .gallery-heading h2 {
+            color: var(--navy);
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(16, 43, 70, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .gallery-info {
+            padding: 20px;
+        }
+
+        .gallery-info h3 {
+            color: var(--navy);
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .gallery-info p {
+            font-size: 14px;
+        }
+
+        .notice {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* CONTACTO */
+
+        .contact {
+            background: var(--navy);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .contact p {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .contact .button {
+            background: #25d366;
+        }
+
+        .contact .button:hover {
+            background: #1eb956;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background: #0a1d30;
+            color: var(--white);
+            text-align: center;
+            padding: 22px 15px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 850px) {
+            .gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 15px 0;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                min-height: 320px;
+                padding: 50px 0;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .intro {
+                padding-top: 45px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item img {
+                height: 230px;
+            }
+
+            .contact h2,
+            .intro h2,
+            .gallery-heading h2 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container navbar">
+
+            <a href="index.html" class="brand">
+                <img src="imagens/logo(1).png" alt="Logótipo NZO YETU">
+
+                <span>
+                    NZO YETU
+                    <small>Construção e Serviços</small>
+                </span>
+            </a>
+
+           <nav class="nav-links">
+             <a href="index.html">Início</a>
+              <a href="#galeria">Galeria</a> 
+             
+               <!-- INTERRUPTOR DO MODO CLARO/ESCURO -->
+<button
+    type="button"
+    id="theme-toggle"
+    class="theme-switch"
+    aria-label="Activar modo escuro"
+    aria-pressed="false">
+
+    <span class="theme-switch-thumb">
+        <span class="theme-sun">☀️</span>
+        <span class="theme-moon">☾</span>
+    </span>
+
+</button>
+             </nav>
+
+        </div>
+    </header>
+
+    <!-- DESTAQUE -->
+    <section class="hero">
+        <div class="container hero-content">
+
+            <span class="label">Construção civil</span>
+
+            <h1>Construção Residencial</h1>
+
+            <p>
+                Soluções para construção e melhoria de espaços residenciais,
+                com atenção ao planeamento, à execução e aos acabamentos.
+            </p>
+
+            <a href="#galeria" class="button">Explorar galeria</a>
+
+        </div>
+    </section>
+
+    <!-- APRESENTAÇÃO -->
+    <section class="intro">
+        <div class="container">
+
+            <h2>Construir com qualidade e dedicação</h2>
+
+            <p>
+                A NZO YETU atua na área da construção civil e presta serviços
+                relacionados com alvenaria, reboco, pintura, acabamentos e
+                manutenção. Trabalhamos para responder às necessidades de
+                cada cliente, desde pequenas intervenções até trabalhos
+                de construção e renovação.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+
+    <section class="gallery-section" id="galeria">
+        <div class="container">
+
+            <div class="gallery-heading">
+                <h2>Galeria de construção</h2>
+                <p>Conheça referências visuais de projetos residenciais.</p>
+            </div>
+
+
+            <div class="gallery">
+
+                
+                <article class="gallery-item">
+                    <img
+                        src="imagens/casa 1.jpg"
+                        alt="Exemplo de casa residencial moderna"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Construção residencial</h3>
+                        <p>Construímos espaços que transformam os seus sonhos em realidade</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/casa 2.jpg"
+                        alt="Exemplo de interior de residência"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Construção de edifícios</h3>
+                        <p>Bases sólidas para construir um futuro com confiança</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img
+                        src="imagens/casa 3.jpg"
+                        alt="Exemplo de projeto residencial"
+                        loading="lazy"
+                    >
+                    <div class="gallery-info">
+                        <h3>Projetos residenciais</h3>
+                        <p>Criamos lares que refletem o seu estilo e acolhem o seu futuro</p>
+                    </div>
+                </article>
+
+        </div>
+    </section>
+    
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+        <div class="container">
+
+            <h2>Tem um projeto de construção?</h2>
+
+            <p>
+                Fale connosco para apresentar o seu projeto e saber
+                mais sobre os nossos serviços de construção civil.
+            </p>
+
+            <a
+                class="button"
+                href="https://wa.me/244951103586?text=Ol%C3%A1%2C%20NZO%20YETU!%20Gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20de%20constru%C3%A7%C3%A3o%20residencial."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Contactar pelo WhatsApp
+            </a>
+
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>
+            &copy; <span id="ano"></span> NZO YETU.
+            Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+<script>
+    const ano = document.getElementById("ano");
+
+    if (ano) {
+        ano.textContent = new Date().getFullYear();
+    }
+</script>
+</body>
+</html>

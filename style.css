@@ -1,0 +1,1369 @@
+/* ==========================
+   CONFIGURAÇÕES GERAIS
+========================== */
+
+:root {
+    --navy: #102b46;
+    --navy-light: #183d5e;
+    --orange: #f39800;
+    --white: #ffffff;
+    --light: #f5f7fa;
+    --text: #536273;
+    --border: #e5eaf0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--navy);
+    line-height: 1.7;
+    background: var(--white);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.logo-img {
+    width: 180px;
+    height: 65px;
+    object-fit: contain;
+    display: block;    
+
+}
+
+.logo-img2 {
+width: 150px;
+height: 65px;
+
+
+}
+
+/* ==========================
+   CABEÇALHO
+========================== */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+    box-shadow: 0 3px 18px rgba(16, 43, 70, 0.08);
+}
+
+.navbar {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.logo strong {
+    color: var(--orange);
+}
+
+.logo-icon {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    color: var(--white);
+    background: var(--orange);
+    border-radius: 8px;
+    font-size: 25px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-menu a {
+    font-size: 14px;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+    color: var(--orange);
+}
+
+.nav-menu .nav-contact {
+    color: var(--white);
+    background: var(--navy);
+    padding: 11px 20px;
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    color: var(--navy);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* ==========================
+   BOTÕES
+========================== */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 13px 23px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.btn-primary {
+    background: var(--orange);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: #d98200;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border-color: rgba(255, 255, 255, 0.8);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    color: var(--navy);
+    background: var(--white);
+}
+
+
+/* ==========================
+   PÁGINA INICIAL
+========================== */
+
+.hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    background:
+        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=85")
+        center 55% / cover no-repeat;
+    color: var(--white);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(8, 28, 48, 0.94),
+        rgba(8, 28, 48, 0.72),
+        rgba(8, 28, 48, 0.25)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.hero-label,
+.section-label {
+    display: inline-block;
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    max-width: 760px;
+    font-size: clamp(38px, 5.5vw, 66px);
+    line-height: 1.12;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: var(--orange);
+}
+
+.hero-content > p {
+    max-width: 590px;
+    color: #e1e8ef;
+    font-size: 17px;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+
+/* ==========================
+   SOBRE NÓS
+========================== */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-content h2,
+.section-heading h2,
+.cta h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.25;
+    margin-bottom: 22px;
+}
+
+.about-content p {
+    color: var(--text);
+    margin-bottom: 17px;
+}
+
+.text-link {
+    display: inline-block;
+    color: var(--orange);
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+
+/* ==========================
+   TÍTULOS DAS SECÇÕES
+========================== */
+
+.section-heading {
+    max-width: 680px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-heading p {
+    color: var(--text);
+}
+
+
+/* ==========================
+   SERVIÇOS
+========================== */
+
+.services {
+    background: var(--light);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.service-card {
+    padding: 28px 23px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(16, 43, 70, 0.09);
+}
+
+.service-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.service-card h3,
+.contact-card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+
+/* ==========================
+   PROJETOS E GALERIA
+========================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--white);
+    border: 1px solid var(--border);
+}
+
+.project-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.project-card:hover img {
+    transform: scale(1.04);
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin-bottom: 5px;
+}
+
+.project-info p,
+.gallery-note {
+    color: var(--text);
+    font-size: 13px;
+}
+
+.gallery-note {
+    margin-top: 25px;
+    text-align: center;
+}
+
+
+/* ==========================
+   CHAMADA PARA AÇÃO
+========================== */
+
+.cta {
+    padding: 65px 0;
+    color: var(--white);
+    background: var(--navy);
+}
+
+.cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.cta h2 {
+    margin-bottom: 12px;
+}
+
+.cta p {
+    max-width: 650px;
+    color: #d9e2eb;
+}
+
+
+/* ==========================
+   CONTACTOS
+========================== */
+
+.contacts {
+    background: var(--light);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.contact-card {
+    padding: 30px 20px;
+    text-align: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.contact-card p {
+    color: var(--text);
+    margin-bottom: 7px;
+}
+
+.whatsapp-link {
+    margin-top: 18px;
+}
+
+
+/* ==========================
+   RODAPÉ
+========================== */
+
+.footer {
+    padding: 35px 0;
+    background: #091d30;
+    color: var(--white);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.footer-content > p {
+    color: #d0d9e2;
+    font-size: 13px;
+}
+
+.footer-logo {
+    color: var(--white);
+}
+
+.copyright {
+    margin-top: 8px;
+}
+
+
+/* ==========================
+   TABLETS
+========================== */
+
+@media (max-width: 950px) {
+
+    .nav-menu {
+        gap: 16px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-grid {
+        gap: 35px;
+    }
+}
+
+
+/* ==========================
+   TELEMÓVEIS
+========================== */
+
+@media (max-width: 700px) {
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .navbar {
+        min-height: 72px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 5% 20px;
+        background: var(--white);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        padding: 13px 10px;
+        font-size: 15px;
+    }
+
+    .nav-menu .nav-contact {
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .hero {
+        min-height: 560px;
+    }
+
+    .hero-content {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .hero-content > p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .about-grid,
+    .projects-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card img {
+        height: 260px;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cta .btn {
+        width: 100%;
+    }
+}
+
+
+/* ==========================
+   ACESSIBILIDADE
+========================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+/* Imagens da secção Nossos Serviços */
+.service-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Cartões dos serviços */
+.service-card {
+    overflow: hidden;
+}
+
+/* ==========================
+   OS NOSSOS VALORES
+========================== */
+
+.values {
+    background: var(--white);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.value-card {
+    padding: 28px 24px;
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(16, 43, 70, 0.09);
+}
+
+.value-icon {
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 18px;
+    background: var(--white);
+    border-radius: 10px;
+    font-size: 29px;
+}
+
+.value-card h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--navy);
+}
+
+.value-card p {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Tablets */
+
+@media (max-width: 950px) {
+
+    .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* Telemóveis */
+
+@media (max-width: 700px) {
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ==========================
+   MODO ESCURO
+========================== */
+
+body.dark-mode {
+    --navy: #e8eef5;
+    --navy-light: #cbd8e6;
+    --white: #17212b;
+    --light: #101820;
+    --text: #c0ccd8;
+    --border: #303d49;
+}
+
+/* Fundo geral */
+
+body.dark-mode {
+    background: #101820;
+    color: #e8eef5;
+}
+
+/* Cabeçalho */
+
+body.dark-mode .header {
+    background: #17212b;
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .nav-menu .nav-contact {
+    background: #f39800;
+    color: #ffffff;
+}
+
+/* Menu para telemóveis */
+
+body.dark-mode .nav-menu {
+    background: #17212b;
+}
+
+body.dark-mode .menu-toggle {
+    color: #ffffff;
+}
+
+/* Secção Quem Somos */
+
+body.dark-mode .about-content h2 {
+    color: #e8eef5;
+}
+
+/* Cartões */
+
+body.dark-mode .service-card,
+body.dark-mode .contact-card,
+body.dark-mode .project-card,
+body.dark-mode .info-card {
+    background: #17212b;
+    border-color: #303d49;
+}
+
+/* Cartões dos valores */
+
+body.dark-mode .value-card {
+    background: #17212b;
+    border-color: #303d49;
+}
+
+body.dark-mode .value-icon {
+    background: #24313e;
+}
+
+/* Títulos dos cartões */
+
+body.dark-mode .service-card h3,
+body.dark-mode .contact-card h3,
+body.dark-mode .project-info h3,
+body.dark-mode .info-card h3,
+body.dark-mode .value-card h3 {
+    color: #e8eef5;
+}
+
+/* Secção dos serviços e contactos */
+
+body.dark-mode .services,
+body.dark-mode .contacts {
+    background: #101820;
+}
+
+/* Missão e visão */
+
+body.dark-mode .mission-vision {
+    background: #101820;
+}
+
+/* Secção dos valores */
+
+body.dark-mode .values {
+    background: #101820;
+}
+
+/* Ícones dos serviços */
+
+body.dark-mode .service-icon {
+    color: #f39800;
+}
+
+/* Rodapé */
+
+body.dark-mode .footer {
+    background: #080e13;
+}
+
+/* Botão principal */
+
+body.dark-mode .btn-primary {
+    background: #f39800;
+    color: #ffffff;
+}
+
+body.dark-mode .btn-primary:hover {
+    background: #d98200;
+}
+
+/* ==========================
+   BOTÃO DO MODO ESCURO
+========================== */
+
+.theme-toggle {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--light);
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.theme-toggle:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+body.dark-mode .theme-toggle {
+    background: #24313e;
+    color: #ffffff;
+    border-color: #455464;
+}
+
+/* Botão no menu do telemóvel */
+
+@media (max-width: 700px) {
+    .theme-toggle {
+        width: 100%;
+        margin-top: 10px;
+        padding: 13px;
+    }
+}
+
+/* Manter o título principal branco no modo escuro */
+body.dark-mode .hero h1 {
+    color: #ffffff;
+}
+
+/* Manter a palavra "futuro" em laranja */
+body.dark-mode .hero h1 span {
+    color: #f39800;
+}
+
+/* SUBSECÇÕES DA ÁREA SOBRE NÓS */
+.about-subsection {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border);
+}
+
+.about-subsection h3 {
+    color: var(--navy);
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.about-subsection p {
+    color: var(--text);
+    line-height: 1.9;
+    margin-bottom: 16px;
+}
+
+.commitment-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.commitment-list li {
+    position: relative;
+    padding: 10px 10px 10px 30px;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.commitment-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: var(--orange);
+    font-weight: bold;
+}
+
+body.dark-mode .about-subsection h3 {
+    color: #f39800;
+}
+
+body.dark-mode .about-subsection {
+    border-top-color: #303d49;
+}
+
+
+/* MISSÃO E VISÃO POR CIMA DOS PRINCÍPIOS */
+#missao,
+#valores {
+    display: block;
+    width: 100%;
+    float: none;
+    clear: both;
+}
+
+#missao .container,
+#valores .container {
+    display: block;
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+/* Cartões da missão e visão */
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Cartões dos princípios */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Adaptação para tablets e telemóveis */
+@media (max-width: 768px) {
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CORREIO ELETRÓNICO NA SECÇÃO DE CONTACTOS */
+.contact-item a {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+/* ORGANIZAÇÃO DOS CONTACTOS */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* CARTÕES DE CONTACTO */
+.contact-grid .contact-item {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 30px 20px;
+    text-align: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* TÍTULOS */
+.contact-grid .contact-item h3 {
+    margin: 14px 0;
+    color: var(--navy);
+}
+
+/* TEXTO E E-MAIL */
+.contact-grid .contact-item p {
+    margin: 6px 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-grid .contact-item a {
+    color: var(--navy);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contact-grid .contact-item a:hover {
+    color: var(--orange);
+}
+
+/* BOTÃO DO WHATSAPP */
+.contact-grid .contact-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 20px;
+    background: var(--orange);
+    color: var(--white) !important;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* TABLETS E TELEMÓVEIS */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
+/* ÍCONE DE CORREIO ELETRÓNICO */
+.contact-icon {
+    font-size: 32px;
+    color: var(--orange);
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LINK DO CORREIO ELETRÓNICO */
+.contact-item a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--orange);
+}
+
+/* Frase da secção "Tem um projeto em mente?" */
+.cta .cta-content p {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+/* Modo claro */
+body:not(.dark-mode) .cta .cta-content p {
+    color: #ff8c32 !important;
+}
+
+/* Modo escuro: texto laranja */
+body.dark-mode .cta .cta-content p {
+    color: #ff8c32 !important;
+}
+
+/* INTERRUPTOR DO MODO CLARO/ESCURO */
+
+.theme-switch {
+    position: relative;
+    width: 100px;
+    height: 52px;
+    padding: 4px;
+    border: none;
+    border-radius: 50px;
+    background: #eeeeee;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: background 0.3s ease;
+}
+
+/* Botão circular */
+
+.theme-switch-thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Ícones */
+
+.theme-sun,
+.theme-moon {
+    position: absolute;
+    font-size: 29px;
+    line-height: 1;
+    transition: opacity 0.2s ease;
+}
+
+.theme-sun {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.theme-moon {
+    color: #000000;
+    opacity: 0;
+}
+
+/* MODO ESCURO */
+
+body.dark-mode .theme-switch {
+    background: #eeeeee;
+}
+
+body.dark-mode .theme-switch-thumb {
+    transform: translateX(48px);
+    background: #eeeeee;
+}
+
+body.dark-mode .theme-sun {
+    opacity: 0;
+}
+
+body.dark-mode .theme-moon {
+    opacity: 1;
+}
+
+/* Efeito ao passar o rato */
+
+.theme-switch:hover {
+    filter: brightness(0.96);
+}
+
+/* Acessibilidade */
+
+.theme-switch:focus-visible {
+    outline: 3px solid #f39800;
+    outline-offset: 3px;
+}
+
+/* Telemóveis */
+
+@media (max-width: 780px) {
+    .theme-switch {
+        width: 100px;
+        height: 52px;
+    }
+}
+
+/* Diminuir o tamanho do interruptor claro/escuro */
+.theme-switch {
+    width: 65px;
+    height: 35px;
+    padding: 3px;
+}
+
+/* Diminuir o círculo interior */
+.theme-switch-thumb {
+    width: 28px;
+    height: 28px;
+    top: 3px;
+    left: 3px;
+}
+
+/* Ajustar a posição no modo escuro */
+body.dark-mode .theme-switch-thumb {
+    transform: translateX(41px);
+}
+
+/* Diminuir os símbolos do sol e da lua */
+.theme-sun,
+.theme-moon {
+    font-size: 17px;
+    line-height: 1;
+}
+
+
+/* Imagens da galeria de acabamentos */
+.gallery-item img {
+    cursor: zoom-in;
+}
+
+/* Fundo da imagem ampliada */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.92);
+    align-items: center;
+    justify-content: center;
+    padding: 50px 15px 20px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 95%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+/* Ampliar imagens apenas na galeria de construção */
+.gallery-item img {
+    cursor: zoom-in;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.92);
+    align-items: center;
+    justify-content: center;
+    padding: 50px 15px 20px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 95%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+/* Ampliar imagens apenas nas galerias dos projetos */
+.gallery-item img {
+    cursor: zoom-in;
+}
+
+.project-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.92);
+    align-items: center;
+    justify-content: center;
+    padding: 50px 15px 20px;
+}
+
+.project-lightbox.active {
+    display: flex;
+}
+
+.project-lightbox img {
+    max-width: 95%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.project-lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+
+/* Cor azul do correio eletrónico */
+.contact-item a[href^="mailto:"] {
+    color: blue;
+    text-decoration: none;
+}
+
+/* Azul mais escuro quando passar o rato */
+.contact-item a[href^="mailto:"]:hover {
+    color: #003399;
+}
+
+
+/* Cor azul dos números de telefone */
+.contact-item a[href^="tel:"] {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Azul mais escuro ao passar o rato */
+.contact-item a[href^="tel:"]:hover {
+    color: #003399;
+}
+
+
+/* Forçar os números de telefone a ficarem azuis */
+a[href^="tel:"] {
+    color: #007BFF !important;
+    text-decoration: none !important;
+}
+
+a[href^="tel:"]:hover {
+    color: #003399 !important;
+}
